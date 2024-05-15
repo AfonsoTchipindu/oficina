@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Backend\TecnicoController;
+use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +31,14 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+ 
+//rota Admin
+Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->middleware('auth')->name('admin.dashboard');
+//rota Secretaria
+Route::get('secretaria/dashboard',[AdminController::class, 'dashboard'])->middleware('auth')->name('secretaria.dashboard');
+//rota Secretaria
+Route::get('cliente/dashboard',[AdminController::class, 'dashboard'])->middleware('auth')->name('cliente.dashboard');
+//rota Secretaria
+Route::get('secretaria/dashboard',[AdminController::class, 'dashboard'])->middleware('auth')->name('secretaria.dashboard');
+//rota Tecnico
+Route::get('gerente/dashboard',[TecnicoController::class, 'dashboard'])->middleware('auth')->name('gerente.dashboard');
