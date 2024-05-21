@@ -36,7 +36,7 @@ require __DIR__.'/auth.php';
 Route::get('admin/dashboard',[AdminController::class, 'dashboard'])->middleware('auth')->name('admin.dashboard');
 //rota Secretaria
 Route::get('secretaria/dashboard',[AdminController::class, 'dashboard'])->middleware('auth')->name('secretaria.dashboard');
-//rota Secretaria
+//rota Cliente
 Route::get('cliente/dashboard',[AdminController::class, 'dashboard'])->middleware('auth')->name('cliente.dashboard');
 //rota Secretaria
 Route::get('secretaria/dashboard',[AdminController::class, 'dashboard'])->middleware('auth')->name('secretaria.dashboard');
